@@ -15,7 +15,6 @@ function Latest(props) {
   }, []);
 
   const arr = [props.latest.data];
-  console.log("data:", props.latest.data);
   return (
     <div style={styles.container}>
       {/* Rendering Latest */}
@@ -27,7 +26,6 @@ function Latest(props) {
   );
 }
 const mapStateToProps = (state) => {
-  console.log("state is :", state);
   return {
     latest: state.latest.latest_movie,
   };

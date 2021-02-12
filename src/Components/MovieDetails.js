@@ -19,8 +19,6 @@ function MovieDetail(props) {
     props.getOneMovie(id);
   }, []);
 
-  console.log("ID:", id);
-  console.log("ID:", props.data.data);
   const Rating = {
     size: 30,
     count: 10,

@@ -15,7 +15,6 @@ function Upcoming(props) {
     props.getUpcomingMovie();
     // eslint-disable-next-line
   }, []);
-  console.log("data:", props.upcomimg);
   return (
     <div style={styles.container}>
       {/* Rendering Latest */}

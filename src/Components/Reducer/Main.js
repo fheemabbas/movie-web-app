@@ -38,7 +38,6 @@ export default function (state = initialState, action) {
         movie_data: action.payload,
       };
     case "GET_SEARCH_MOVIE":
-      console.log("search :", action.payload);
       return {
         ...state,
         now_playing: action.payload.data,

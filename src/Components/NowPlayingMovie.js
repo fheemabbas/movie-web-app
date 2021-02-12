@@ -15,7 +15,6 @@ function NowPlayng(props) {
     props.getNowPlayingMovie();
     // eslint-disable-next-line
   }, []);
-  console.log("data:", props.now_playing);
   return (
     <div style={styles.container}>
       {/* Rendering Latest */}
