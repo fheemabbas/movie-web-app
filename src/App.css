@@ -6,7 +6,43 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.banner {
+  height: fit-content;
+}
+.eventmaintitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #626262;
+  text-transform: capitalize;
+  line-height: 1.3;
+  margin: 20px 50px;
+}
+.overview {
+  /* font-size: 24px; */
+  font-weight: 300;
+  color: #626262;
+  text-transform: capitalize;
+  line-height: 1.3;
+  margin: 10px 50px;
+}
+.fontSize {
+  margin: 10px 50px;
+  font-size: 18px;
+}
+.applicationHeader {
+  margin: 20px 3px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+.applicationHeader:after {
+  top: 31px;
+  left: 1px;
+  width: 24px;
+  border-bottom: 3px solid #fb0;
+  position: absolute;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

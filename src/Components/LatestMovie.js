@@ -13,18 +13,21 @@ function Latest(props) {
   useEffect(() => {
     props.getLatestMovie();
   }, []);
-  console.log("data:", props.latest);
+
+  const arr = [props.latest.data];
+  console.log("data:", props.latest.data);
   return (
     <div style={styles.container}>
       {/* Rendering Latest */}
-      {/* {props.latest &&
-        props.latest.data.map((u, i) => {
-          return <MovieCard data={u} key={u.id} />;
-        })} */}
+      {props.latest.data &&
+        arr.map((u, i) => {
+          return <MovieCard data={u} key={i} />;
+        })}
     </div>
   );
 }
 const mapStateToProps = (state) => {
+  console.log("state is :", state);
   return {
     latest: state.latest.latest_movie,
   };

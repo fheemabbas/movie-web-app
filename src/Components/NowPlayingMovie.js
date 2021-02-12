@@ -13,6 +13,7 @@ const styles = {
 function NowPlayng(props) {
   useEffect(() => {
     props.getNowPlayingMovie();
+    // eslint-disable-next-line
   }, []);
   console.log("data:", props.now_playing);
   return (

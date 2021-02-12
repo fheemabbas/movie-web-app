@@ -6,7 +6,7 @@ const initialState = {
   movie_data: [],
   search_movie_data: [],
 };
-
+// eslint-disable-next-line
 export default function (state = initialState, action) {
   // eslint-disable-next-line default-case
   switch (action.type) {
@@ -38,9 +38,10 @@ export default function (state = initialState, action) {
         movie_data: action.payload,
       };
     case "GET_SEARCH_MOVIE":
+      console.log("search :", action.payload);
       return {
         ...state,
-        search_movie_data: action.payload,
+        now_playing: action.payload.data,
       };
     default:
       return state;
