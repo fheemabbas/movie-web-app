@@ -15,7 +15,7 @@ function App() {
         <Route path="/upcoming" exact render={(props) => <Upcomimg />} />
         <Route path="/now-playing" exact render={(props) => <NowPlaying />} />
         <Route path="/movie/:id" exact render={(props) => <MovieDetail />} />
-        <Redirect to="/letest" />
+        <Redirect to="/now-playing" />
       </Switch>
     </div>
   );

@@ -8,7 +8,7 @@ function Header(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/latest">
+        <a className="navbar-brand" href="/now-playing">
           MovieApp
         </a>
         <button
