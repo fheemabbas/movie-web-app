@@ -3,6 +3,8 @@ const initialState = {
   latest_movie: [],
   upcoming: [],
   now_playing: [],
+  movie_data: [],
+  search_movie_data: [],
 };
 
 export default function (state = initialState, action) {
@@ -29,6 +31,16 @@ export default function (state = initialState, action) {
       return {
         ...state,
         now_playing: action.payload,
+      };
+    case "GET_ONE_MOVIE":
+      return {
+        ...state,
+        movie_data: action.payload,
+      };
+    case "GET_SEARCH_MOVIE":
+      return {
+        ...state,
+        search_movie_data: action.payload,
       };
     default:
       return state;

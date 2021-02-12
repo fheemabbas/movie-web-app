@@ -7,7 +7,7 @@ export const getLatestMovie = () => (dispatch) => {
     .then((result) => {
       dispatch({
         type: "GET_LATEST_MOVIE",
-        payload: result.data,
+        payload: result,
       });
     })
     .catch((err) => {
@@ -49,24 +49,37 @@ export const getNowPlayingMovie = () => (dispatch) => {
       });
     });
 };
-// export const getoneCommunityAmbassdor = (id) => (dispatch) => {
-//   dispatch(setLoading())
-//   let url = `/api/communityambassador/getone`
-//   if (id) {
-//     url = `/api/communityambassador/getone?id=${id}`
-//   }
-//   axios
-//     .get(url)
-//     .then((result) => {
-//       dispatch({
-//         type: GET_ONE_LIST_AMBASSDOR,
-//         payload: result.data,
-//       })
-//     })
-//     .catch((err) => {
-//       dispatch({
-//         type: LIST_ERROR,
-//         payload: err && err.response ? err.response.data : '',
-//       })
-//     })
-// }
+export const getOneMovie = (id) => (dispatch) => {
+  axios
+    .get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+    .then((result) => {
+      dispatch({
+        type: "GET_ONE_MOVIE",
+        payload: result,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: "LIST_ERROR",
+        payload: err,
+      });
+    });
+};
+export const searchMovie = (search) => (dispatch) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}`
+    )
+    .then((result) => {
+      dispatch({
+        type: "GET_SEARCH_MOVIE",
+        payload: result,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: "LIST_ERROR",
+        payload: err,
+      });
+    });
+};
